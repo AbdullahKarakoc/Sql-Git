@@ -33,7 +33,7 @@ WHERE year < 2000 OR year > 2010;
 SELECT title, year FROM movies
 WHERE year <= 2003;
 
-                                                -- EXERCİSE --
+                                                -- EXERCİSE 3 --
 
 -- Find all the Toy Story movies
 SELECT title, director FROM movies 
