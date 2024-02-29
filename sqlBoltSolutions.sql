@@ -186,3 +186,25 @@ GROUP BY role;
 SELECT building, SUM(years_employed) as Total_years_employed
 FROM employees
 GROUP BY building;
+
+
+                                            -- EXERCİSE 11 --
+
+-- Find the number of Artists in the studio (without a HAVING clause)
+SELECT role, COUNT(*) as Number_of_artists
+FROM employees
+WHERE role = "Artist";
+
+-- Find the number of Employees of each role in the studio
+SELECT role, COUNT(*)
+FROM employees
+GROUP BY role;
+
+-- Find the total number of years employed by all Engineers 
+SELECT role, SUM(years_employed)
+FROM employees
+GROUP  BY role
+HAVING role = "Engineer"
+
+
+
