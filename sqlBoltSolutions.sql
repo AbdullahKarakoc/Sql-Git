@@ -100,4 +100,24 @@ WHERE country LIKE "United States"
 ORDER BY population DESC
 LIMIT 2 OFFSET 2;
 
+                                            -- EXERCİSE 6 --
 
+-- Find the domestic and international sales for each movie 
+SELECT title, domestic_sales, international_sales
+FROM movies
+    JOIN boxoffice
+        ON movies.id = boxoffice.movide_id;
+
+-- Show the sales numbers for each movie that did better internationally rather than domestically
+SELECT title, domestic_sales, international_sales
+FROM movies
+    JOIN boxoffice
+        ON movies.id = boxoffice.movide_id
+WHERE international_sales > domestic_sales;
+
+-- List all the movies by their ratings in descending order
+SELECT title, rating
+FROM movies
+    JOIN boxoffice
+        ON movies.id = boxoffice.movide_id
+ORDER BY rating DESC;
